@@ -1,14 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.DiaryFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.diary.DiaryFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/diary_text"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Diary"
+
+        android:textSize="30sp"
+        android:textColor="#D2403E3E"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/log_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Log your meal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/diary_text"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/meal_log_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meal Logs"
+        android:layout_below="@id/log_button"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="21sp"
+        android:textColor="#D2403E3E"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/meal_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_below="@id/meal_log_text"
+        android:layout_marginTop="15dp"
+        tools:listitem="@layout/meal_item"
+        />
 
-</FrameLayout>
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/calendar_picker"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_below="@id/diary_text"-->
+<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        app:startIconDrawable="@drawable/ic_baseline_calendar_month_24"-->
+<!--        >-->
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--             android:inputType="date"-->
+<!--            android:enabled="false"-->
+<!--            />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+
+
+
+</RelativeLayout>
