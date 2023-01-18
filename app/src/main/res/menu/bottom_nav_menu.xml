@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/Study"
+        android:id="@+id/menu_dashboard"
         android:enabled="true"
-        android:icon="@drawable/ic_study"
-        android:title="Study"/>
+        android:icon="@drawable/ic_baseline_dashboard_24"
+        android:title="Dashboard"/>
     <item
-        android:id="@+id/Analysis"
+        android:id="@+id/menu_diary"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_analytics_24"
+
+
+        android:icon="@drawable/ic_baseline_local_fire_department_24"
+
         android:title="Diary"/>
     <item
-        android:id="@+id/Test"
+        android:id="@+id/menu_bot"
         android:enabled="true"
-        android:icon="@drawable/ic_baseline_assignment_24"
-        android:title="Test"/>
-<!--    <item-->
-<!--        android:id="@+id/Profile"-->
-<!--        android:enabled="true"-->
-<!--        android:icon="@drawable/ic_baseline_person_24"-->
-<!--        android:title="Profile"/>-->
+        android:icon="@drawable/ic_baseline_chat_24"
+        android:title="Chat"/>
+
+    <item
+        android:id="@+id/menu_blogs"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_people_24"
+        android:title="Blogs"/>
+
 </menu>
