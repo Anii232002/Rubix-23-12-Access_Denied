@@ -9,7 +9,7 @@
         android:id="@+id/Analysis"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_analytics_24"
-        android:title="Analysis"/>
+        android:title="Diary"/>
     <item
         android:id="@+id/Test"
         android:enabled="true"
