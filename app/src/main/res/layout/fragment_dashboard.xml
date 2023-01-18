@@ -64,16 +64,6 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <com.github.mikephil.charting.charts.PieChart
-                    android:id="@+id/piechart"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_below="@id/textView2"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp" />
-
                 <com.github.anastr.speedviewlib.SpeedView
                     android:id="@+id/speedView"
                     android:layout_width="230dp"
@@ -175,6 +165,72 @@
         </androidx.cardview.widget.CardView>
 
         </GridLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gridLayout"
+            android:layout_margin="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="320dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/piechart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@id/textView2"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="320dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/piechart1"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@id/textView2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="320dp"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.github.mikephil.charting.charts.PieChart
+                        android:id="@+id/piechart2"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@id/textView2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
 
     </RelativeLayout>
 

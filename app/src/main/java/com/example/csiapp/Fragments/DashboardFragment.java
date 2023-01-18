@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import com.example.csiapp.ExerciseActivity;
 import com.example.csiapp.databinding.FragmentDashboardBinding;
 import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 
 import java.util.ArrayList;
@@ -36,14 +38,18 @@ public class DashboardFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentDashboardBinding.inflate(getLayoutInflater());
 
-        /*pieChart = binding.piechart;
+        pieChart = binding.piechart;
 
         PieDataSet pieDataSet = new PieDataSet(dataValuesPC(),"");
         pieDataSet.setColors(colorArr);
 
         pieChart.setDrawEntryLabels(false);
         PieData pieData = new PieData(pieDataSet);
-        pieChart.setData(pieData);*/
+        pieChart.setData(pieData);
+        binding.piechart1.setDrawEntryLabels(false);
+        binding.piechart2.setDrawEntryLabels(false);
+        binding.piechart2.setData(pieData);
+        binding.piechart1.setData(pieData);
 
         binding.speedView.setMaxSpeed(maxCal);
         binding.speedView.speedTo(currCal, 1000);
