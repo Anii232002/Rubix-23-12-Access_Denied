@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Study"
+        android:enabled="true"
+        android:icon="@drawable/ic_study"
+        android:title="Study"/>
+    <item
+        android:id="@+id/Analysis"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_analytics_24"
+        android:title="Analysis"/>
+    <item
+        android:id="@+id/Test"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_assignment_24"
+        android:title="Test"/>
+<!--    <item-->
+<!--        android:id="@+id/Profile"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_baseline_person_24"-->
+<!--        android:title="Profile"/>-->
+</menu>

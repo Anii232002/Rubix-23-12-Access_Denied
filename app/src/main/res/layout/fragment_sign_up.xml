@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Fragments.SignUpFragment">
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:hint="Enter User Name"
+        android:drawablePadding="4dp"
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:background="@drawable/edittext_rounded"/>
+
+    <EditText
+        android:id="@+id/emailId_signUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+        android:hint="Enter Email Id"
+        android:drawablePadding="4dp"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:background="@drawable/edittext_rounded"/>
+
+    <EditText
+        android:id="@+id/password_signUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="10dp"
+        android:layout_marginBottom="20dp"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="4dp"
+        android:hint="Enter Password"
+        android:background="@drawable/edittext_rounded"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text=" Sign Up "
+        android:elevation="20dp"
+        android:background="@drawable/button_shape"/>
+
+</LinearLayout>

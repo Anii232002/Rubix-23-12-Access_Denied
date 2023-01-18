@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "311701330098",
+    "project_id": "csiapp-9abb7",
+    "storage_bucket": "csiapp-9abb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311701330098:android:f694bcc106e8cbdf5651ab",
+        "android_client_info": {
+          "package_name": "com.example.csiapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311701330098-elrql9qt92ahohgvgr3q34jio10eqc81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6-LG7BUOKvVKHEnHVXRMAW1jL7rSfcoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311701330098-elrql9qt92ahohgvgr3q34jio10eqc81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
