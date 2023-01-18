@@ -31,9 +31,9 @@ class MainActivity : AppCompatActivity() {
                             DiaryFragment()
                         ).commit()
                     3 -> supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, ChatBotFragment()).commit()
-                    2 -> supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, BlogsFragment()).commit()
+                    2 -> supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, ChatBotFragment()).commit()
                     else -> supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, DashboardFragment()).commit()
                 }
@@ -42,5 +42,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity();
     }
 }

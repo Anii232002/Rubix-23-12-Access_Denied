@@ -47,6 +47,7 @@
         android:layout_below="@id/textfield_title_text"
         android:layout_marginTop="10dp"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         >
@@ -81,6 +82,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
             app:startIconDrawable="@drawable/ic_baseline_calendar_month_24"
             >
             <com.google.android.material.textfield.TextInputEditText
@@ -93,17 +95,18 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/meal_submit_button"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_below="@id/calendar_picker"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
-        android:text="submit" />
+        <Button
+            android:id="@+id/meal_submit_button"
+            android:theme="@style/ThemeOverlay.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/calendar_picker"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="submit" />
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/meal_card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -166,7 +169,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
-                    android:drawableStart="tem"
+
                     android:text="Fat Total: 53g"
                     android:textSize="20sp" />
 
@@ -241,7 +244,7 @@
 
             </LinearLayout>
         </RelativeLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 
 
 

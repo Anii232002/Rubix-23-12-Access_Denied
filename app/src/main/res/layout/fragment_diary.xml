@@ -19,16 +19,15 @@
         android:textSize="30sp"
         android:textColor="#D2403E3E"/>
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/log_button"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="Log your meal"
-        android:layout_marginTop="20dp"
         android:layout_below="@id/diary_text"
-        />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Log your meal" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/meal_log_text"
