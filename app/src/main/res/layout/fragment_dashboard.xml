@@ -31,10 +31,10 @@
             <ImageView
                 android:id="@+id/streakImg"
                 android:layout_marginTop="18dp"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_toLeftOf="@id/streakNumber"
-                android:background="@drawable/fire"/>
+                android:background="@drawable/nonfire"/>
 
             <TextView
                 android:layout_marginTop="15dp"
