@@ -17,7 +17,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:id="@+id/profile_image"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
@@ -63,6 +64,7 @@
                     android:text="Calories"
                     android:textSize="18sp"
                     android:textStyle="bold" />
+
 
                 <com.github.anastr.speedviewlib.SpeedView
                     android:id="@+id/speedView"
@@ -183,6 +185,7 @@
                     android:layout_height="wrap_content">
 
                     <com.github.mikephil.charting.charts.PieChart
+
                     android:id="@+id/piechart"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"

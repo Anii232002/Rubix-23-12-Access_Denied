@@ -8,7 +8,10 @@
     <item
         android:id="@+id/menu_diary"
         android:enabled="true"
+
+
         android:icon="@drawable/ic_baseline_local_fire_department_24"
+
         android:title="Diary"/>
     <item
         android:id="@+id/menu_bot"

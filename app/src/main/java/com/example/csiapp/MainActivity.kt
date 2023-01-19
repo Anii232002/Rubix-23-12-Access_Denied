@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.csiapp.Fragments.BlogsFragment
 import com.example.csiapp.Fragments.ChatBotFragment
 import com.example.csiapp.Fragments.DashboardFragment
-import com.example.csiapp.Fragments.DiaryFragment
+import com.example.csiapp.Fragments.diary.DiaryFragment
 import me.ibrahimsn.lib.OnItemSelectedListener
 import me.ibrahimsn.lib.SmoothBottomBar
 
@@ -27,7 +27,9 @@ class MainActivity : AppCompatActivity() {
                     0 -> supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, DashboardFragment()).commit()
                     1 -> supportFragmentManager.beginTransaction()
-                        .replace(R.id.fragment_container, DiaryFragment()).commit()
+                        .replace(R.id.fragment_container,
+                            DiaryFragment()
+                        ).commit()
                     3 -> supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, BlogsFragment()).commit()
                     2 -> supportFragmentManager.beginTransaction()
