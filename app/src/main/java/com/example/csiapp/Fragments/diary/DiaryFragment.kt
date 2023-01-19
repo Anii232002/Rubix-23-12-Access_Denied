@@ -47,6 +47,7 @@ class DiaryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+        var total_cal_intake=0.0
 
         val docRef = FirebaseFirestore.getInstance().collection("Meals").get().addOnSuccessListener {
             for(document in it){
@@ -54,6 +55,12 @@ class DiaryFragment : Fragment() {
 
                     val nutriList=mealMap["nutriList"] as List<NutriInfoModel>
 
+
+                //total calories intake
+                    for (i in 0..nutriList.size-1) {
+                        val nutriMap=nutriList[i] as HashMap<String,Any>
+                        total_cal_intake += nutriMap["calories"] as Double
+                    }
                     Log.d("NUTRI",nutriList.toString())
 
                 mealList.add(MealInfoModel(mealMap["date"].toString(),mealMap["day"].toString(),
@@ -62,7 +69,7 @@ class DiaryFragment : Fragment() {
                 _fragmentDiaryBinding!!.mealList.layoutManager =
                     LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
 
-                Log.d("HERE",mealList.toString())
+
                 _fragmentDiaryBinding!!.mealList.adapter = MealLogAdapter(mealList)
 
 

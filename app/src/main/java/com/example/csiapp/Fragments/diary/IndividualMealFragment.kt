@@ -99,7 +99,10 @@ class IndividualMealFragment : Fragment() {
                     "Sugar (in g): " + it[0].sugar_g.toString()
                 _individualMealBinding.proteinFoodText.text =
                     "Protein (in g): " + it[0].protein_g.toString()
+
                 _individualMealBinding.mealCardView.visibility = View.VISIBLE
+
+                _individualMealBinding.mealDoneButton.visibility=View.VISIBLE
 
                 mealList.add(it[0])
 
