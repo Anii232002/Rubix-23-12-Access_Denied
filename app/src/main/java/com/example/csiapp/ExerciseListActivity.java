@@ -24,7 +24,7 @@ public class ExerciseListActivity extends AppCompatActivity {
 
 
     ActivityExerciseListActvitiyBinding binding;
-    String[] bodyParts = {"back","cardio","chest","lower arms","lower legs","neck","shoulders","waist"};
+    String[] bodyParts = {"back","cardio","chest","lower arms","lower legs","shoulders","waist"};
     private String LogTag = ExerciseListActivity.class.getSimpleName();
     private String BASEURL = "https://exercisedb.p.rapidapi.com/exercises/bodyPart";
     private String BASEURLTemp = "https://exercisedb.p.rapidapi.com/exercises/bodyPart/";

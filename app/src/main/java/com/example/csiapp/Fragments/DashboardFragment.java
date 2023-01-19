@@ -28,6 +28,12 @@ import com.example.csiapp.ExerciseActivity;
 import com.example.csiapp.databinding.FragmentDashboardBinding;
 import com.github.mikephil.charting.charts.PieChart;
 
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
@@ -47,11 +53,10 @@ public class DashboardFragment extends Fragment {
     }
 
     FragmentDashboardBinding binding;
-    PieChart pieChart;
     int[] colorArr = new int[] {Color.LTGRAY,Color.BLUE,Color.CYAN,Color.DKGRAY,Color.GREEN,Color.MAGENTA,Color.RED};
     static int maxCal = 2300;
     static int currCal = 1200;
-    private FloatingActionButton fb ;
+    private ImageView fb ;
 
     private TextView streakNumber;
     private ImageView streakImg;
@@ -65,6 +70,19 @@ public class DashboardFragment extends Fragment {
 
         int streak = updateStreak();
 
+        LineDataSet lineDataSet = new LineDataSet(dataValues2(),"Daily Hours Spent");
+        LineData lineData = new LineData();
+        lineData.addDataSet(lineDataSet);
+        binding.lineChart.setData(lineData);
+        binding.lineChart.invalidate();
+        binding.lineChart.setContentDescription("");
+
+        PieDataSet pieDataSet = new PieDataSet(dataValuesPC(),"");
+        pieDataSet.setColors(colorArr);
+        PieData pieData = new PieData(pieDataSet);
+        binding.piechart1.setDrawEntryLabels(false);
+        binding.piechart1.setData(pieData);
+
         streakNumber.setText(String.valueOf(streak));
 
     }
@@ -75,20 +93,12 @@ public class DashboardFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentDashboardBinding.inflate(getLayoutInflater());
 
-
-
-        pieChart = binding.piechart;
-
-        PieDataSet pieDataSet = new PieDataSet(dataValuesPC(),"");
-        pieDataSet.setColors(colorArr);
-
-        pieChart.setDrawEntryLabels(false);
-        PieData pieData = new PieData(pieDataSet);
-        pieChart.setData(pieData);
-        binding.piechart1.setDrawEntryLabels(false);
-        binding.piechart2.setDrawEntryLabels(false);
-        binding.piechart2.setData(pieData);
-        binding.piechart1.setData(pieData);
+        BarDataSet barDataSet = new BarDataSet(barValues(),"");
+        BarData barData = new BarData();
+        barData.addDataSet(barDataSet);
+        barData.setBarWidth(0.5f);
+        binding.barChart.setData(barData);
+        binding.barChart.invalidate();
 
         binding.speedView.setMaxSpeed(maxCal);
         binding.speedView.speedTo(currCal, 1000);
@@ -180,5 +190,28 @@ public class DashboardFragment extends Fragment {
         dataVals.add(new PieEntry(63,"SQL"));
         return dataVals;
     }
+
+    private ArrayList<BarEntry> barValues(){
+        ArrayList<BarEntry> dataVals = new ArrayList<>();
+        dataVals.add(new BarEntry(0,5));
+        dataVals.add(new BarEntry(1,0));
+        dataVals.add(new BarEntry(2,3));
+        dataVals.add(new BarEntry(3,4));
+        dataVals.add(new BarEntry(4,1));
+        dataVals.add(new BarEntry(5,6));
+        return dataVals;
+    }
+
+    private ArrayList<Entry> dataValues2(){
+        ArrayList<Entry> dataVals = new ArrayList<>();
+        dataVals.add(new Entry(0,12));
+        dataVals.add(new Entry(2,16));
+        dataVals.add(new Entry(3,23));
+        dataVals.add(new Entry(5,1));
+        dataVals.add(new Entry(7,10));
+        return dataVals;
+    }
+
+
 
 }
