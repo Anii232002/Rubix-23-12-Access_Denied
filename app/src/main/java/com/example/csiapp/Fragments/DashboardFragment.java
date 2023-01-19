@@ -10,9 +10,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 
 import com.example.csiapp.UserInfo;
+import com.example.csiapp.WaterTracker;
 import com.example.csiapp.databinding.FragmentDashboardBinding;
 import com.github.mikephil.charting.charts.PieChart;
 
@@ -38,6 +40,7 @@ public class DashboardFragment extends Fragment {
     }
 
     FragmentDashboardBinding binding;
+    LinearLayout diet ;
     PieChart pieChart;
     int[] colorArr = new int[] {Color.LTGRAY,Color.BLUE,Color.CYAN,Color.DKGRAY,Color.GREEN,Color.MAGENTA,Color.RED};
     static int maxCal = 2300;
@@ -51,7 +54,7 @@ public class DashboardFragment extends Fragment {
         binding = FragmentDashboardBinding.inflate(getLayoutInflater());
 
         pieChart = binding.piechart;
-
+       diet = binding.diet;
         PieDataSet pieDataSet = new PieDataSet(dataValuesPC(),"");
         pieDataSet.setColors(colorArr);
 
@@ -80,7 +83,12 @@ public class DashboardFragment extends Fragment {
                 startActivity(new Intent(getContext(), ExerciseActivity.class));
             }
         });
-
+      diet.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              startActivity(new Intent(getContext(), WaterTracker.class));
+          }
+      });
 
         return binding.getRoot();
     }
