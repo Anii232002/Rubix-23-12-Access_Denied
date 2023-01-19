@@ -19,6 +19,21 @@
         android:theme="@style/globalTheme"
         tools:targetApi="31">
         <activity
+            android:name=".UserInfo"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".PostContent"
+            android:exported="false"
+            android:theme="@style/Theme.CSIapp.NoActionbar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".CreatePost"
             android:parentActivityName=".MainActivity"
             android:exported="false">
