@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import com.example.csiapp.R;
 
@@ -61,6 +63,19 @@ public class ChatBotFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_chat_bot, container, false);
+        View v = inflater.inflate(R.layout.fragment_chat_bot, container, false);
+        // Find the WebView by its unique ID
+        WebView webView = v.findViewById(R.id.web);
+
+        // loading http://www.google.com url in the WebView.
+        webView.loadUrl("https://gregarious-tartufo-f2b924.netlify.app/");
+
+        // this will enable the javascript.
+        webView.getSettings().setJavaScriptEnabled(true);
+
+        // WebViewClient allows you to handle
+        // onPageFinished and override Url loading.
+        webView.setWebViewClient(new WebViewClient());
+        return v;
     }
 }
