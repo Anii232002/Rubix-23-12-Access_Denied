@@ -1,5 +1,6 @@
 package com.example.csiapp.Fragments;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -36,6 +37,7 @@ public class BlogsFragment extends Fragment implements PostAdapter.onClickListne
     PostAdapter postAdapter;
     List<PostModel> postModelList;
     FirebaseAuth auth;
+    ProgressDialog pd;
 
 
     @Override

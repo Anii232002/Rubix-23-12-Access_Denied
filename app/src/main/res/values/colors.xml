@@ -18,4 +18,14 @@
     <color name="iconTintActive">#ffffff</color>
     <color name="colorTextPrimary">#ffffff</color>
     <color name="grey">#FFB8B3BF</color>
+
+    <color name="pink_300">#F065B8</color>
+    <color name="pink_50">#FCD6EC</color>
+    <color name="teal_a200">#63EEDA</color>
+    <color name="cyan_50">#D8FBF5</color>
+    <color name="deep_purple_300">#9B5CE5</color>
+    <color name="deep_purple_50">#E6D5F8</color>
+    <color name="light_blue_a400">#03BBF8</color>
+    <color name="light_blue_100">#BDEEFE</color>
+
 </resources>

@@ -36,4 +36,5 @@ public class PostModel {
     public void setpDescription(String pDescription) {
         this.pDescription = pDescription;
     }
+
 }

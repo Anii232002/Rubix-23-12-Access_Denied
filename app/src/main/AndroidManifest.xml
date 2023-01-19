@@ -36,6 +36,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".ExerciseListActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".UserInfo"
             android:exported="false">
             <meta-data
@@ -52,8 +59,8 @@
         </activity>
         <activity
             android:name=".CreatePost"
-            android:exported="false"
-            android:parentActivityName=".MainActivity">
+            android:parentActivityName=".MainActivity"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -81,11 +88,15 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+
+            android:exported="true">
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+
     </application>
 
 </manifest>
