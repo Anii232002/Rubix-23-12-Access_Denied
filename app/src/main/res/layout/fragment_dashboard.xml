@@ -53,28 +53,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:text="Calories"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
 
-
-                <com.github.anastr.speedviewlib.SpeedView
+                <com.github.anastr.speedviewlib.TubeSpeedometer
                     android:id="@+id/speedView"
-                    android:layout_width="230dp"
-                    android:layout_height="230dp"
-                    android:layout_below="@id/textView2"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
                     android:layout_centerHorizontal="true"
                     app:sv_unit=" Cal"
-                    app:sv_centerCircleColor="#0D4EE3"
-                    app:sv_indicatorColor="#2E3B5A"/>
+                    app:sv_speedometerWidth="16dp"
+                    app:sv_indicatorColor="#0000CD"/>
 
 
 
@@ -194,7 +181,6 @@
                         android:id="@+id/piechart"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:layout_below="@id/textView2"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="10dp"
@@ -211,7 +197,6 @@
                         android:id="@+id/piechart1"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:layout_below="@id/textView2"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="10dp"
@@ -228,7 +213,6 @@
                         android:id="@+id/piechart2"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:layout_below="@id/textView2"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginEnd="10dp"
