@@ -36,8 +36,8 @@ public class DashboardFragment extends Fragment {
     FragmentDashboardBinding binding;
     PieChart pieChart;
     int[] colorArr = new int[] {Color.LTGRAY,Color.BLUE,Color.CYAN,Color.DKGRAY,Color.GREEN,Color.MAGENTA,Color.RED};
-    public static int maxCal = 2300;
-    public static int currCal = 1200;
+    static int maxCal = 2300;
+    static int currCal = 1200;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

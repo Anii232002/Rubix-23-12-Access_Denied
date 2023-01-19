@@ -76,6 +76,8 @@
                     app:sv_centerCircleColor="#0D4EE3"
                     app:sv_indicatorColor="#2E3B5A"/>
 
+
+
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
@@ -172,7 +174,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/gridLayout"
-            android:layout_margin="16dp">
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -181,26 +186,26 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="320dp"
-                    android:layout_margin="10dp"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
 
                     <com.github.mikephil.charting.charts.PieChart
 
-                    android:id="@+id/piechart"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:layout_below="@id/textView2"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp" />
+                        android:id="@+id/piechart"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@id/textView2"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp" />
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="320dp"
-                    android:layout_margin="10dp"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
 
                     <com.github.mikephil.charting.charts.PieChart
                         android:id="@+id/piechart1"
@@ -216,8 +221,8 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="320dp"
-                    android:layout_margin="10dp"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
 
                     <com.github.mikephil.charting.charts.PieChart
                         android:id="@+id/piechart2"
@@ -234,7 +239,31 @@
             </LinearLayout>
 
         </HorizontalScrollView>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="600dp"
+            android:id="@+id/fb"
+            android:layout_marginLeft="260dp"
+            android:layout_gravity="center">
 
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+
+                android:src="@android:color/transparent" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+              android:layout_marginTop="12dp"
+                android:layout_marginLeft="10dp"
+                android:elevation="16dp"
+                android:textSize="15dp"
+                android:text="Update Status"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white" />
+        </FrameLayout>
     </RelativeLayout>
 
 </ScrollView>

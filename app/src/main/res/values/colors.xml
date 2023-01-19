@@ -17,4 +17,5 @@
     <color name="iconTint">#C8FFFFFF</color>
     <color name="iconTintActive">#ffffff</color>
     <color name="colorTextPrimary">#ffffff</color>
+    <color name="grey">#FFB8B3BF</color>
 </resources>
