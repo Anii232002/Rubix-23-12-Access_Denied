@@ -106,6 +106,15 @@ public class CreatePost extends AppCompatActivity {
             }
         });
 
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                title.setText("");
+                desc.setText("");
+                startActivity(new Intent(CreatePost.this,MainActivity.class));
+            }
+        });
+
 
     }
 
