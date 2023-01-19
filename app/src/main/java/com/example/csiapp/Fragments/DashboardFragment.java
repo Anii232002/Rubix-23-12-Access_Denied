@@ -42,7 +42,7 @@ public class DashboardFragment extends Fragment {
     int[] colorArr = new int[] {Color.LTGRAY,Color.BLUE,Color.CYAN,Color.DKGRAY,Color.GREEN,Color.MAGENTA,Color.RED};
     static int maxCal = 2300;
     static int currCal = 1200;
-    private FrameLayout fb ;
+    private FloatingActionButton fb ;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
