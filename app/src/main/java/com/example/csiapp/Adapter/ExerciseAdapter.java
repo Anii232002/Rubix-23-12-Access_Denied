@@ -73,12 +73,14 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
 
         GifImageView gif;
         TextView name;
+        TextView target;
 
         public ExerciseHolder(@NonNull View itemView) {
             super(itemView);
 
             name = itemView.findViewById(R.id.exerciseName);
             gif =  itemView.findViewById(R.id.gifImage);
+            target = itemView.findViewById(R.id.target);
 
         }
 
@@ -89,6 +91,7 @@ public class ExerciseAdapter extends RecyclerView.Adapter<ExerciseAdapter.Exerci
             s1 = "https"+s1;
             Glide.with(context).asGif().load(s1).into(gif);
             name.setText(model.getName());
+            target.setText(model.getTarget());
 
         }
 

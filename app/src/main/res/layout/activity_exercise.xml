@@ -37,7 +37,7 @@
             app:cardElevation="4dp">
 
             <LinearLayout
-                android:id="@+id/exercise"
+                android:id="@+id/exerciseCreate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -67,7 +67,7 @@
             app:cardElevation="4dp">
 
             <LinearLayout
-                android:id="@+id/diet"
+                android:id="@+id/exerciseList"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"

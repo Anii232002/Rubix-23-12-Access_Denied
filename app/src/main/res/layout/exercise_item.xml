@@ -24,9 +24,32 @@
             android:layout_below="@id/gifImage"
             android:layout_centerHorizontal="true"
             android:textStyle="bold"
+            android:gravity="center"
             android:id="@+id/exerciseName"
             android:textSize="24sp"
+            android:textColor="#0047AB"
             android:layout_margin="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt1"
+            android:layout_below="@id/exerciseName"
+            android:text="Target"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/target"
+            android:layout_below="@id/exerciseName"
+            android:text="Target"
+            android:layout_toRightOf="@id/txt1"
+            android:textSize="18sp"
+            android:layout_margin="5dp"/>
+
 
     </RelativeLayout>
 

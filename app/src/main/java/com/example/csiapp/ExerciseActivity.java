@@ -4,16 +4,14 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.net.Uri;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebViewClient;
 
 import com.example.csiapp.Adapter.ExerciseAdapter;
-import com.example.csiapp.Fragments.DashboardFragment;
 import com.example.csiapp.databinding.ActivityExerciseBinding;
 import com.example.csiapp.utils.ExerciseModel;
 import com.example.csiapp.utils.ExerciseQueryUtils;
@@ -34,6 +32,13 @@ public class ExerciseActivity extends AppCompatActivity {
         ExerciseAsyncTask task = new ExerciseAsyncTask();
         task.execute();
 
+        binding.exerciseList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                startActivity(new Intent(getApplicationContext(), ExerciseListActivity.class));
+            }
+        });
 
     }
 
