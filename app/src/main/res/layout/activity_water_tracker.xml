@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WaterTracker">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="30dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="40dp"
+    android:textColor="@color/black"
+    android:text="Your Today's step count"/>
+
+    <com.github.anastr.speedviewlib.TubeSpeedometer
+        android:id="@+id/tubeSpeedometer"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="70dp"
+        android:layout_width="wrap_content"
+        app:sv_unit=" Steps"
+        android:layout_height="wrap_content" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+
+                android:text="You are  "/>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:id="@+id/remain_steps"
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:text="10000"/>
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width ="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="steps from your goal"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+
+        android:text="Your Goal is "/>
+            <TextView
+                android:id="@+id/context_menu_tv"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:text="10000"/>
+        <TextView
+           android:layout_marginLeft="10dp"
+            android:layout_width ="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="steps"/>
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

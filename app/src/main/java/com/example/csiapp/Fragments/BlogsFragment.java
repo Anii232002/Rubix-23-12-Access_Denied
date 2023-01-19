@@ -1,5 +1,6 @@
 package com.example.csiapp.Fragments;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -12,12 +13,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.csiapp.Adapter.PostAdapter;
 import com.example.csiapp.CreatePost;
-import com.example.csiapp.MainActivity;
 import com.example.csiapp.Model.PostModel;
+import com.example.csiapp.PostContent;
 import com.example.csiapp.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,13 +30,14 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlogsFragment extends Fragment {
+public class BlogsFragment extends Fragment implements PostAdapter.onClickListner {
 
     FloatingActionButton createPost;
     RecyclerView recyclerView;
     PostAdapter postAdapter;
     List<PostModel> postModelList;
     FirebaseAuth auth;
+    ProgressDialog pd;
 
 
     @Override
@@ -46,6 +47,10 @@ public class BlogsFragment extends Fragment {
 
 
         View v =  inflater.inflate(R.layout.fragment_blogs, container, false);
+
+
+//        Intent intent = new Intent(getActivity(), PostContent.class);
+//        startActivity(intent);
 
         createPost = (FloatingActionButton) v.findViewById(R.id.createBlog);
 
@@ -74,7 +79,7 @@ public class BlogsFragment extends Fragment {
                 for(DataSnapshot ds : dataSnapshot.getChildren()){
                     PostModel postModel = ds.getValue(PostModel.class);
                     postModelList.add(postModel);
-                    postAdapter = new PostAdapter(getContext(),postModelList);
+                    postAdapter = new PostAdapter(getContext(),postModelList,BlogsFragment.this::onClicked );
                     recyclerView.setAdapter(postAdapter);
                     postAdapter.notifyDataSetChanged();
                 }
@@ -101,5 +106,15 @@ public class BlogsFragment extends Fragment {
         postModelList = new ArrayList<>();
         loadPosts();
 
+    }
+
+    @Override
+    public void onClicked(int position) {
+
+        Intent intent = new Intent(getActivity(),PostContent.class);
+        intent.putExtra("title",postModelList.get(position).getpTitle());
+        intent.putExtra("desc",postModelList.get(position).getpDescription());
+        intent.putExtra("img",postModelList.get(position).getpImage());
+        startActivity(intent);
     }
 }
