@@ -19,7 +19,7 @@ class MealsViewModel() : ViewModel() {
 
     //livedata of is immutable as the list object is retrieved here and not changed
     val mealList: LiveData<List<NutriInfoModel>> = _mealList
-    val foodItem=MutableLiveData<String>()
+    val singleDayList=MutableLiveData<MutableList<MealInfoModel>>()
 
 
 
@@ -28,13 +28,21 @@ class MealsViewModel() : ViewModel() {
 
         viewModelScope.launch {
             try {
+
                 _mealList.value=MealApi.retroFitService.getMeals(foodItem)
                 Log.d("Pizza_List","Pizza list retrieved successfully! "+mealList.value!!.size)
+                Log.d("List_Here ",mealList.value.toString())
             }
             catch (e: Exception){
                 Log.d("Exception","Exception occurred in fetching data "+e.message)
             }
         }
 
+    }
+
+    fun getSingleMeal(mealListNew:MutableList<MealInfoModel>){
+
+        singleDayList.value=mealListNew
+        Log.d("MEAL_LIST",singleDayList.value.toString())
     }
     }

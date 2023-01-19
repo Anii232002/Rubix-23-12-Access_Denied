@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="200dp"
+        android:layout_height="480dp"
+        app:strokeWidth="1dp"
+        app:cardElevation="10dp"
+        app:strokeColor="#D9D7DC"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/food_single_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Rice"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/calories_single_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food_single_text_view"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Calories: 40cal"
+                android:textColor="#535050"
+                android:textSize="18sp" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/serving_single_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/calories_single_text"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="Serving Size(in g): 40cal"
+                android:textColor="#535050"
+                android:textSize="18sp" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fat_total_single_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serving_single_text"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="Fat total(in g): 40cal"
+                android:textColor="#535050"
+                android:textSize="18sp" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/protein_total_single_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fat_total_single_text"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="Protein (in g): 40cal"
+                android:textColor="#535050"
+                android:textSize="18sp" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cholesterol_total_single_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/protein_total_single_text"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="Cholesterol (in mg): 40cal"
+                android:textColor="#535050"
+                android:textSize="18sp" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/carbs_single_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cholesterol_total_single_text"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="Carbohydrates (in g): 40cal"
+                android:textColor="#535050"
+                android:textSize="18sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/sugar_total_single_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/carbs_single_text"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:text="Sugar (in g): 40cal"
+                android:textColor="#535050"
+                android:textSize="18sp"
+                />
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

@@ -2,7 +2,7 @@ package com.example.csiapp.models
 
 import com.squareup.moshi.Json
 
-data class MealInfoModel(val day: String, val time: String, val calories: Int,val nutriList:List<NutriInfoModel>)
+data class MealInfoModel(val date: String, val day: String, val total_calories: Long, val nutriList:List<NutriInfoModel>)
 
 data class  NutriInfoModel(
     @Json(name = "name") val name: String,

@@ -5,52 +5,63 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/meal_single_card"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
-        app:cardElevation="20dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="#B5ADAD"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
         >
         <RelativeLayout
+            android:id="@+id/rl_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+
             >
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/day_logged_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Monday"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp"
-                android:textSize="20sp"
-                />
+                android:layout_marginTop="10dp"
+                android:text="Monday"
+                android:textSize="20sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/time_logged"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="12th December 5:00 P.M"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="15dp"
-                android:textSize="16sp"
                 android:layout_below="@id/day_logged_text"
-                />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="12th December 5:00 P.M"
+                android:textSize="16sp" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/calories_intake"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1920\nCal"
-                android:layout_marginEnd="15dp"
+                android:layout_below="@id/day_logged_text"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="20dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:text="1920\nCal"
                 android:textColor="#D8C30A"
-                android:textSize="21sp"
-                android:layout_below="@id/day_logged_text"
+                android:textSize="21sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/single_meal_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/time_logged"
+                android:visibility="gone"
                 />
 
         </RelativeLayout>

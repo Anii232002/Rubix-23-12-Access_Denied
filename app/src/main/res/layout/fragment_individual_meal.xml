@@ -1,254 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.diary.IndividualMealFragment">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         >
 
 
-
-    <!-- TODO: Update blank fragment layout -->
-  <com.google.android.material.textview.MaterialTextView
-      android:id="@+id/main_heading_text"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Enter Your meal details"
-      android:textSize="25sp"
-      android:drawableEnd="@drawable/food_icon"
-      android:drawablePadding="5dp"
-      android:layout_marginTop="20dp"
-      android:layout_marginStart="15dp"
-      android:fontFamily="@font/poppins_semibold"
-      android:textColor="@color/black"
-      />
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/textfield_title_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/main_heading_text"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/poppins"
-        android:text="Enter Food name"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/food_detail_text"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_below="@id/textfield_title_text"
-        android:layout_marginTop="10dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/meal_input_field"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Food name"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/datefield_title_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/food_detail_text"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/poppins"
-        android:text="Enter Date"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
-
-    <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/calendar_picker"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_below="@id/datefield_title_text"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
-            app:startIconDrawable="@drawable/ic_baseline_calendar_month_24"
-            >
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/calendar_picker_text"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                 android:inputType="none"
-                android:hint="D/M/YYYYY"
-
-                />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/meal_submit_button"
-            android:theme="@style/ThemeOverlay.Material3.Button"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_below="@id/calendar_picker"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:text="submit" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/meal_card_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/meal_submit_button"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:visibility="visible"
-        >
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
 
 
-            <LinearLayout
-                android:id="@+id/lnr1"
+            <!-- TODO: Update blank fragment layout -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/main_heading_text"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:drawableEnd="@drawable/food_icon"
+                android:drawablePadding="5dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Enter Your meal details"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/title_food_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Rice"
-                    android:textSize="24sp"
-                    android:fontFamily="@font/poppins"
-                    android:textColor="@color/black"
-                    />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textfield_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/main_heading_text"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins"
+                android:text="Enter Food name"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/title_calories_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:drawableStart="@drawable/ic_baseline_local_fire_department_24"
-                    android:drawablePadding="5dp"
-                    android:text="Calories: 53 cal"
-                    android:drawableTint="#E8D316"
-                    android:textSize="20sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/serving_size_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:drawableStart="@drawable/serving_icon"
-                    android:drawablePadding="5dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Serving size: 100g"
-                    android:textSize="20sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/fat_total_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-
-                    android:text="Fat Total: 53g"
-                    android:textSize="20sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/protein_food_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Protein: 56g"
-                    android:textSize="20sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/cholestrol_food_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Cholesterol: 56mg"
-                    android:textSize="20sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/carbs_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Carbohydrates: 89g"
-                    android:textSize="20sp" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/sugar_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    android:text="Sugar: 89g"
-                    android:textSize="20sp" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/food_detail_text"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/lnr1"
+                android:layout_height="60dp"
+                android:layout_below="@id/textfield_title_text"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/meal_input_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Food name" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/datefield_title_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food_detail_text"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins"
+                android:text="Enter Date"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/calendar_picker_text"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/datefield_title_text"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:text="Select a Date"
+
+                android:theme="@style/Theme.MaterialComponents.Light"
+                app:icon="@drawable/ic_baseline_calendar_month_24" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/meal_submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/calendar_picker_text"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:text="submit"
+                android:theme="@style/Theme.MaterialComponents.Light" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/meal_card_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/meal_submit_button"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                app:cardElevation="10dp"
 
                 >
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="20dp"
-                    app:elevation="20dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/circle_bg_button"
-                    android:src="@drawable/ic_baseline_done_24"
-                    app:fabCustomSize="45dp"
-                    app:iconSize="20dp"
-                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    app:elevation="20dp"
-                    android:background="@drawable/circle_bg_button"
-                    android:src="@drawable/ic_baseline_cancel_24"
-                    app:fabCustomSize="45dp"
-                    app:backgroundTint="#F33F63" />
 
-            </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/lnr1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/title_food_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="Rice"
+                            android:textColor="@color/black"
+                            android:textSize="24sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/title_calories_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:drawableStart="@drawable/ic_baseline_local_fire_department_24"
+                            android:drawablePadding="5dp"
+                            android:drawableTint="#E8D316"
+                            android:text="Calories: 53 cal"
+                            android:textSize="20sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/serving_size_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:drawableStart="@drawable/serving_icon"
+                            android:drawablePadding="5dp"
+                            android:text="Serving size: 100g"
+                            android:textSize="20sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/fat_total_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+
+                            android:text="Fat Total: 53g"
+                            android:textSize="20sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/protein_food_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Protein: 56g"
+                            android:textSize="20sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/cholestrol_food_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Cholesterol: 56mg"
+                            android:textSize="20sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/carbs_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Carbohydrates: 89g"
+                            android:textSize="20sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/sugar_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Sugar: 89g"
+                            android:textSize="20sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_toEndOf="@id/lnr1"
+
+                        >
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/done_fab"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/circle_bg_button"
+                            android:src="@drawable/ic_baseline_done_24"
+                            app:elevation="10dp"
+                            app:fabCustomSize="45dp"
+
+                            app:iconSize="20dp" />
+
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/meal_done_button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/meal_card_view"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:text="Done"
+                android:theme="@style/Theme.MaterialComponents.Light" />
+
+
         </RelativeLayout>
-    </androidx.cardview.widget.CardView>
 
+    </ScrollView>
 
-
-
-    </RelativeLayout>
-
-</androidx.core.widget.NestedScrollView>
+</RelativeLayout>

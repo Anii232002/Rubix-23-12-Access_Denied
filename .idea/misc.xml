@@ -5,15 +5,18 @@
       <map>
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/drawable/circle_bg_button.xml" value="0.107" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/drawable/food_icon.xml" value="0.107" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/drawable/ic_baseline_calendar_month_24.xml" value="0.1" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/drawable/ic_baseline_local_fire_department_24.xml" value="0.1" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/layout/activity_authentication.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/layout/activity_create_post.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/layout/activity_exercise.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/layout/activity_main.xml" value="0.18070652173913043" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/layout/fragment_dashboard.xml" value="0.176" />
-        <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/layout/fragment_diary.xml" value="0.16" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/layout/fragment_diary.xml" value="0.176" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/layout/fragment_diray.xml" value="0.25" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/layout/fragment_individual_meal.xml" value="0.2" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/layout/meal_item.xml" value="0.2" />
+        <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/layout/single_meal_info_item.xml" value="0.24895833333333334" />
         <entry key="..\:/Users/Puneet/AndroidStudioProjects/Rubix-23-12-Access_Denied/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
       </map>
     </option>

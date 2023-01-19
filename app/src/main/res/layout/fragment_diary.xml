@@ -46,30 +46,30 @@
         android:id="@+id/meal_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
         android:layout_below="@id/meal_log_text"
         android:layout_marginTop="15dp"
-        tools:listitem="@layout/meal_item"
-        />
+        tools:listitem="@layout/meal_item" />
 
 
-<!--    <com.google.android.material.textfield.TextInputLayout-->
-<!--        android:id="@+id/calendar_picker"-->
-<!--        android:layout_marginTop="30dp"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_below="@id/diary_text"-->
-<!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
-<!--        android:layout_marginStart="20dp"-->
-<!--        android:layout_marginEnd="20dp"-->
-<!--        app:startIconDrawable="@drawable/ic_baseline_calendar_month_24"-->
-<!--        >-->
-<!--        <com.google.android.material.textfield.TextInputEditText-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--             android:inputType="date"-->
-<!--            android:enabled="false"-->
-<!--            />-->
-<!--    </com.google.android.material.textfield.TextInputLayout>-->
+    <!--    <com.google.android.material.textfield.TextInputLayout-->
+    <!--        android:id="@+id/calendar_picker"-->
+    <!--        android:layout_marginTop="30dp"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_below="@id/diary_text"-->
+    <!--        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+    <!--        android:layout_marginStart="20dp"-->
+    <!--        android:layout_marginEnd="20dp"-->
+    <!--        app:startIconDrawable="@drawable/ic_baseline_calendar_month_24"-->
+    <!--        >-->
+    <!--        <com.google.android.material.textfield.TextInputEditText-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--             android:inputType="date"-->
+    <!--            android:enabled="false"-->
+    <!--            />-->
+    <!--    </com.google.android.material.textfield.TextInputLayout>-->
 
 
 
