@@ -20,18 +20,20 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.MyHolder> {
 
     Context context;
     List<PostModel> postModelList;
+    private onClickListner mOnClickListner;
 
 
-    public PostAdapter(Context context, List<PostModel> postModelList) {
+    public PostAdapter(Context context, List<PostModel> postModelList, onClickListner onClickListner) {
         this.context = context;
         this.postModelList = postModelList;
+        this.mOnClickListner = onClickListner;
     }
 
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.post_layout,parent,false);
-        return new MyHolder(view);
+        return new MyHolder(view, mOnClickListner);
     }
 
     @Override
@@ -42,8 +44,9 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.MyHolder> {
         String image = postModelList.get(position).getpImage();
 
         holder.postTitle.setText(title);
-        holder.postDescription.setText (description);
+//        holder.postDescription.setText (description);
 
+        holder.postImage.setImageDrawable(null);
         Glide.with(context).load(image).into(holder.postImage);
 
     }
@@ -53,17 +56,30 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.MyHolder> {
         return postModelList.size();
     }
 
-    class MyHolder extends RecyclerView.ViewHolder{
+    class MyHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         ImageView postImage;
         TextView postTitle, postDescription;
+        onClickListner mOnClickListner;
 
-        public MyHolder(@NonNull View itemView) {
+        public MyHolder(@NonNull View itemView, onClickListner onClickListner) {
             super(itemView);
 
             postImage = itemView. findViewById(R.id.postImage);
             postTitle = itemView. findViewById(R.id.postTitle);
-            postDescription = itemView.findViewById(R.id.postDescription);
+//            postDescription = itemView.findViewById(R.id.postDescription);
+
+            mOnClickListner = onClickListner;
+            itemView.setOnClickListener(this);
         }
+
+        @Override
+        public void onClick(View view) {
+            mOnClickListner.onClicked(getAdapterPosition());
+        }
+    }
+
+    public interface onClickListner {
+        void onClicked(int position);
     }
 }
