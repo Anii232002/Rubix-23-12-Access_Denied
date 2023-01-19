@@ -8,6 +8,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -54,7 +55,7 @@ public class DashboardFragment extends Fragment {
     }
 
     FragmentDashboardBinding binding;
-    PieChart pieChart;
+    private CardView track ;
     int[] colorArr = new int[] {Color.LTGRAY,Color.BLUE,Color.CYAN,Color.DKGRAY,Color.GREEN,Color.MAGENTA,Color.RED};
     static int maxCal = 2300;
     static int currCal = 1200;
@@ -70,20 +71,30 @@ public class DashboardFragment extends Fragment {
         streakNumber=binding.streakNumber;
         streakImg=binding.streakImg;
 
-        pieChart = binding.piechart;
+        int streak = updateStreak();
+
+        LineDataSet lineDataSet = new LineDataSet(dataValues2(),"Daily Hours Spent");
+        LineData lineData = new LineData();
+        lineData.addDataSet(lineDataSet);
+        binding.lineChart.setData(lineData);
+        binding.lineChart.invalidate();
+        binding.lineChart.setContentDescription("");
 
         PieDataSet pieDataSet = new PieDataSet(dataValuesPC(),"");
         pieDataSet.setColors(colorArr);
-
-        pieChart.setDrawEntryLabels(false);
         PieData pieData = new PieData(pieDataSet);
-        pieChart.setData(pieData);
         binding.piechart1.setDrawEntryLabels(false);
-        binding.piechart2.setDrawEntryLabels(false);
-        binding.piechart2.setData(pieData);
         binding.piechart1.setData(pieData);
 
         streakNumber.setText(String.valueOf(streak));
+
+        track = binding.track;
+        track.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), WaterTracker.class));
+            }
+        });
 
     }
 
