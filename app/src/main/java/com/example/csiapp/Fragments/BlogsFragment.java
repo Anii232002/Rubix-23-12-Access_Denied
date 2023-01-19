@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.example.csiapp.Adapter.PostAdapter;
 import com.example.csiapp.CreatePost;
@@ -38,6 +39,7 @@ public class BlogsFragment extends Fragment implements PostAdapter.onClickListne
     List<PostModel> postModelList;
     FirebaseAuth auth;
     ProgressDialog pd;
+    ProgressBar progressBar;
 
 
     @Override
@@ -48,6 +50,7 @@ public class BlogsFragment extends Fragment implements PostAdapter.onClickListne
 
         View v =  inflater.inflate(R.layout.fragment_blogs, container, false);
 
+        progressBar = v.findViewById(R.id.progressBar_blog);
 
 //        Intent intent = new Intent(getActivity(), PostContent.class);
 //        startActivity(intent);
@@ -83,10 +86,11 @@ public class BlogsFragment extends Fragment implements PostAdapter.onClickListne
                     recyclerView.setAdapter(postAdapter);
                     postAdapter.notifyDataSetChanged();
                 }
+                progressBar.setVisibility(View.GONE);
             }
             @Override
             public void onCancelled (@NonNull DatabaseError databaseError) {
-
+                progressBar.setVisibility(View.GONE);
             }
         });
     }

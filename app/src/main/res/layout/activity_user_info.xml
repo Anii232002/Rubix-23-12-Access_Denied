@@ -5,16 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
     tools:context=".UserInfo">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Please add your information"
-    android:textSize="20dp"
-    android:textColor="@color/black"
-    android:layout_marginLeft="60dp"
-    android:layout_marginTop="10dp"/>
 
+    <ImageView
+        android:id="@+id/back_user_info"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="10dp"
+        android:text="Please add your information"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
 
     <androidx.cardview.widget.CardView
@@ -22,42 +32,37 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp">
-
-
+            android:padding="4dp"
+            android:gravity="left"
+            android:background="@drawable/edittext_rounded">
 
             <TextView
                 android:id="@+id/idTVSelectedDate"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_above="@id/idBtnPickDate"
                 android:layout_centerInParent="true"
-
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="Date"
+                android:layout_marginLeft="20dp"
+                android:text="Select Date"
                 android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textColor="@color/colorprimary"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
-            <!--on below line we are creating
-                a button for date picker-->
-            <Button
+            <ImageView
                 android:id="@+id/idBtnPickDate"
-                android:layout_width="100dp"
+                android:layout_width="40dp"
                 android:layout_height="60dp"
-                android:layout_centerInParent="true"
-               android:layout_marginLeft="50dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/calander"
                 android:text="Pick Date"
                 android:textAllCaps="false" />
 
 
-        </LinearLayout>
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -65,42 +70,44 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp">
+            android:background="@drawable/edittext_rounded"
+            android:padding="4dp">
 
 
 
             <TextView
                 android:id="@+id/height"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_centerInParent="true"
-
-                android:gravity="center"
-                android:padding="10dp"
+                android:layout_marginLeft="20dp"
                 android:text="Height"
+                android:layout_alignParentStart="true"
                 android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textColor="@color/colorprimary"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
             <!--on below line we are creating
                 a button for date picker-->
-            <Button
+            <ImageView
                 android:id="@+id/idBtnPickHeight"
-                android:layout_width="100dp"
+                android:layout_width="60dp"
                 android:layout_height="60dp"
+                android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="50dp"
+                android:layout_marginRight="105dp"
+                android:src="@drawable/height"
                 android:text="Pick height"
                 android:textAllCaps="false" />
 
 
-        </LinearLayout>
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -108,79 +115,84 @@
         android:layout_height="wrap_content"
         android:layout_margin="8dp">
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="16dp">
-
+            android:background="@drawable/edittext_rounded"
+            android:padding="4dp">
 
 
             <TextView
                 android:id="@+id/weight"
-                android:layout_width="150dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_centerInParent="true"
-
-                android:gravity="center"
-                android:padding="10dp"
+                android:layout_marginLeft="20dp"
                 android:text="Weight"
+                android:layout_alignParentStart="true"
                 android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textColor="@color/colorprimary"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
             <!--on below line we are creating
                 a button for date picker-->
-            <Button
+            <ImageView
                 android:id="@+id/idBtnPickWeight"
-                android:layout_width="100dp"
+                android:layout_width="50dp"
                 android:layout_height="60dp"
+                android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="50dp"
-                android:text="Pick weight"
+                android:layout_marginRight="105dp"
+                android:src="@drawable/weight"
+                android:text="Pick height"
                 android:textAllCaps="false" />
 
-
-        </LinearLayout>
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_margin="10dp"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="15dp"
-            android:text="Your BMI is "/>
+            android:text="Your BMI is "
+            android:textSize="15dp" />
+
         <TextView
             android:id="@+id/bmi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:textStyle="bold"
-           android:maxLines="1"
             android:maxLength="5"
-            android:textColor="@color/black"
-            android:text="0.0"/>
+            android:maxLines="1"
+            android:text="0.0"
+            android:textColor="@color/colorprimary"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:textSize="15dp"
+            android:text="Ideal weight : "
 
-            android:text="Ideal weight : "/>
+            android:textSize="15dp" />
+
         <TextView
             android:id="@+id/idealweight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
+            android:text="0.0"
+            android:textColor="@color/colorprimary"
             android:textSize="17dp"
-            android:textColor="@color/black"
-            android:text="0.0"/>
+            android:textStyle="bold" />
 
 
     </LinearLayout>
@@ -188,11 +200,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Set your goal"
-        android:textSize="20dp"
-        android:textColor="@color/black"
         android:layout_marginLeft="140dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:text="Set your goal"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -200,25 +212,23 @@
         android:layout_margin="8dp">
 
         <LinearLayout
+            android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="16dp">
 
 
-
-            <Button
-
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/muscle_gain"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="0dp"
+                android:background="@drawable/edittext_rounded"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="Muscle Gain"
-                android:background="#B8B3BF"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp"
@@ -227,14 +237,14 @@
             <!--on below line we are creating
                 a button for date picker-->
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
 
                 android:id="@+id/weight_gain"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:background="#B8B3BF"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="15dp"
+                android:background="@drawable/edittext_rounded"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="Weight Gain"
@@ -242,13 +252,14 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 android:textStyle="bold" />
-            <Button
+
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/weight_loss"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
                 android:layout_centerInParent="true"
-                android:background="#B8B3BF"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/edittext_rounded"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="Weight loss"
@@ -259,11 +270,12 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/submit"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="100dp"
-        android:text="Submit"/>
+        android:layout_marginTop="30dp"
+        android:text="Submit" />
 </LinearLayout>

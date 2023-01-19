@@ -22,7 +22,7 @@ class IndividualMealAdapter(val individualMealList:List<NutriInfoModel>):Recycle
             fun bind(meal:HashMap<String,Any>){
                     foodSingleText.text=meal["name"].toString()
                     calorieSingleText.text="Calories (in cal): "+meal["calories"].toString()
-                    proteinSingleText.text="Protein (in g): "+meal["name"].toString()
+                    proteinSingleText.text="Protein (in g): "+meal["protein"].toString()
                     fatSingleText.text="Total Fat: (in g)"+meal["fat_total_g"].toString()
                     cholSingleText.text="Cholesterol (in mg): "+meal["cholesterol_mg"].toString()
                     sugarSingleText.text="Sugar (in g): "+meal["sugar_g"].toString()

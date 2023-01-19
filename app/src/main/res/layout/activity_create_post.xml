@@ -19,11 +19,22 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/coverImg"
+            android:id="@+id/coverImg2"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
+            android:scaleType="centerCrop"
             android:background="@drawable/upload" />
+
+        <ImageView
+            android:id="@+id/coverImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:background="@drawable/upload" />
+
     </androidx.cardview.widget.CardView>
 
 

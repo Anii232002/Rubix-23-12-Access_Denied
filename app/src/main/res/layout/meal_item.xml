@@ -14,21 +14,18 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
-        >
+        android:layout_marginBottom="20dp">
+
         <RelativeLayout
             android:id="@+id/rl_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            >
+            android:layout_height="match_parent">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/day_logged_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
                 android:text="Monday"
                 android:textSize="20sp" />
 
@@ -37,8 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/day_logged_text"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
                 android:text="12th December 5:00 P.M"
                 android:textSize="16sp" />
 
@@ -49,11 +45,9 @@
                 android:layout_below="@id/day_logged_text"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="15dp"
-                android:text="1920\nCal"
-                android:textColor="#D8C30A"
+                android:layout_margin="10dp"
+                android:text="1920 Cal"
+                android:textColor="@color/colorprimary"
                 android:textSize="21sp" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -61,11 +55,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/time_logged"
-                android:visibility="gone"
-                />
+                android:visibility="gone" />
 
         </RelativeLayout>
-    </com.google.android.material.card.MaterialCardView>
 
+    </com.google.android.material.card.MaterialCardView>
 
 </RelativeLayout>

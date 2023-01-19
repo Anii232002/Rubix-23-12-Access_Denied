@@ -46,7 +46,7 @@ class MealLogAdapter(val mealItems:MutableList<MealInfoModel>): RecyclerView.Ada
                 if(underrv.visibility==View.GONE)
                     v=View.VISIBLE
                 else
-                    v=View.INVISIBLE
+                    v=View.GONE
             TransitionManager.beginDelayedTransition(layout,AutoTransition())
 
             underrv.visibility=v

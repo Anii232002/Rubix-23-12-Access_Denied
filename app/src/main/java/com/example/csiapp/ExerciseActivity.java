@@ -40,6 +40,13 @@ public class ExerciseActivity extends AppCompatActivity {
             }
         });
 
+        binding.backExercise.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
     }
 
     protected void updateUi(ArrayList<ExerciseModel> list){
@@ -69,6 +76,7 @@ public class ExerciseActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(ArrayList<ExerciseModel> event) {
 
+            binding.progressBarExercise.setVisibility(View.GONE);
             if (event == null) {
                 // Log.i("AllFlights", "NULL EVENT");
                 //  binding.emptyTextView.setVisibility(View.VISIBLE);

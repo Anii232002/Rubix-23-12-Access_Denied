@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.Manifest;
 import android.app.ProgressDialog;
@@ -19,6 +20,7 @@ import android.provider.MediaStore;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -53,6 +55,7 @@ public class CreatePost extends AppCompatActivity {
     ImageView img;
 
     Uri image_uri = null;
+    ImageView img2;
     private static final int GALLERY_IMAGE_CODE = 100;
     private static final int CAMERA_IMAGE_CODE = 200;
     ProgressDialog pd;
@@ -77,11 +80,12 @@ public class CreatePost extends AppCompatActivity {
         save=findViewById(R.id.save);
         cancel=findViewById(R.id.cancel);
         img=findViewById(R.id.coverImg);
+        img2 = findViewById(R.id.coverImg2);
 
         pd = new ProgressDialog(this);
         auth = FirebaseAuth.getInstance();
 
-        img.setOnClickListener(new View.OnClickListener() {
+        img2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 imagePickDialog();
@@ -251,10 +255,12 @@ public class CreatePost extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(resultCode == RESULT_OK){
             if(requestCode == GALLERY_IMAGE_CODE){
+                img.setVisibility(View.VISIBLE);
                 image_uri = data.getData();
                 img.setImageURI(image_uri);
             }
             if(requestCode == CAMERA_IMAGE_CODE){
+                img.setVisibility(View.VISIBLE);
                 img.setImageURI(image_uri);
             }
         }
