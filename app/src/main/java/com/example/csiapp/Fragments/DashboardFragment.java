@@ -192,13 +192,12 @@ public class DashboardFragment extends Fragment {
 
     private ArrayList<PieEntry> dataValuesPC(){
         ArrayList<PieEntry> dataVals = new ArrayList<>();
-        dataVals.add(new PieEntry(15,"Linux"));
-        dataVals.add(new PieEntry(34,"Html"));
-        dataVals.add(new PieEntry(23,"Docker"));
-        dataVals.add(new PieEntry(86,"DevOps"));
-        dataVals.add(new PieEntry(26,"Kubernetes"));
-        dataVals.add(new PieEntry(17,"Laravel"));
-        dataVals.add(new PieEntry(63,"SQL"));
+        dataVals.add(new PieEntry(20,"protein"));
+        dataVals.add(new PieEntry(33,"carbs"));
+        dataVals.add(new PieEntry(10,"vitamin"));
+        dataVals.add(new PieEntry(7,"fibers"));
+        dataVals.add(new PieEntry(28,"fat"));
+        dataVals.add(new PieEntry(2,"others"));
         return dataVals;
     }
 
