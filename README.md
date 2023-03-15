@@ -1,4 +1,4 @@
-﻿# Rubix-23-12-Access_Denied
+﻿# Gym-Genie
 Hello #Connections .Recently me and my team mates Umang Singh Puneet Shetty and Rajkamal rajarshi built an fitness app for a 2-day #Rubix hackathon orgainized by CSI-TSEC (Computer Society of India). 
 
 Our App had following features -
